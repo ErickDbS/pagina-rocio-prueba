@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2980b9, #6dd5fa);  
+    }
+
+  nav {
+    background: linear-gradient(to right, #2980b9, #6dd5fa);  
+    color: #fff;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  li {
+    display: inline;
+  }
+
+  li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .proteina{
+    width: 100%; /* El div ocupa todo el ancho disponible */
+    padding: 10px;
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+    margin-top: 50px;
+  }
+
+ .creatina{
+    width: 100%; /* El div ocupa todo el ancho disponible */
+    padding: 10px;
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+ }
+
+/* Estilos para el contenedor de productos */
+.Productos {
+    display: flex;
+    flex-direction: column; /* Cambiar la dirección del flexbox a columna */
+    align-items: center; /* Alinear elementos horizontalmente en el centro */
+    margin-bottom: 20px;
+}
+
+/* Estilos para cada producto */
+.proteina, .creatina {
+    display: flex;
+    align-items: center; /* Alinear elementos horizontalmente en el centro */
+    margin-bottom: 10px; /* Espacio entre cada producto */
+}
+
+/* Estilos para la imagen del producto */
+.producto-proteina{
+    max-width: 200px; /* Tamaño máximo de la imagen */
+    vertical-align: middle; /* Alinear verticalmente al centro */
+}
+
+.producto-creatina{
+    max-width: 100px; /* Tamaño máximo de la imagen */
+    vertical-align: middle; /* Alinear verticalmente al centro */
+    margin-left: 40px;
+}
+
+/* Estilos para el texto del producto */
+.proteina-info {
+    font-family: Arial, sans-serif;
+    margin-left: 10px; /* Espacio entre la imagen y el texto */
+    color: white;
+}
+
+.creatina-info{
+    font-family: Arial, sans-serif;
+    margin-left: 70px; /* Espacio entre la imagen y el texto */
+    color: white;
+}
+
+  li a:hover {
+    background: linear-gradient(to right, #2980b9, #6dd5fa);  
+  }
