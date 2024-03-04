@@ -32,17 +32,12 @@
                 <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
             </div>
             <div class="btn-container">
-                <button type="button" class="volverBtn">Volver</button>
+                <button type="button" class="volverBtn" id="btnVolver">Volver</button>
                 <button type="submit" class="btn">Continuar</button>
             </div>
         </form>
     </div>
 
-    <script>
-        document.getElementById("volverBtn").addEventListener("click", function() {
-            console.log("Botón de volver clickeado");
-            window.location.href = "login.html";
-        });
-    </script>
+    <script src="script/registro.js"></script>
 </body>
 </html>
