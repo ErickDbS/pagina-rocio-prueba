@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrina - Iniciar Sesión</title>
@@ -11,18 +10,18 @@
   <div class="container-principal">
     <div class="login-container">
         <h1>Nutrina</h1>
-        <form id="login-form"> <!-- Agrega el id al formulario -->
+        <form id="login-form" method="POST" action="login.php">
             <div class="input-field">
                 <label for="username">Usuario:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="Usuario" name="Usuario" required>
             </div>
             <div class="input-field">
                 <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="Contraseña" name="Contraseña" required>
             </div>
             <button id="login-button" type="submit">Iniciar Sesión</button>
         </form>
-        <p id="error-message" class="error-message"></p>
+        <p id="error-message" class="error-message"><?php if(isset($error_message)) { echo $error_message; } ?></p>
         <div class="register-link">
             ¿Aún no tienes cuenta? <a href="registrarUsuarios.html">Regístrate aquí</a>
         </div>

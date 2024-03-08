@@ -1,29 +1,37 @@
 <?php
 // Conexión a la base de datos
-$conexion = new mysqli("localhost", "root", "01272002", "local-rocio");
+$servername = "192.168.1.112"; 
+$username = "erick"; 
+$password = "01272002"; 
+$dbname = "edgar"; 
 
-// Verificar la conexión
-if ($conexion->connect_error) {
-    die("Error en la conexión: " . $conexion->connect_error);
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
 }
 
 // Obtener datos del formulario
 $nombre = $_POST['nombre'];
 $apellidos = $_POST['apellidos'];
 $correo = $_POST['correo'];
-$contrasena = $_POST['Contrasena'];
+$contrasena = $_POST['contrasena'];
 
-// Preparar la consulta SQL para insertar los datos
-$sql = "INSERT INTO registrar_usuarios (Nombre, Apellidos, Email, Contraseña) 
+// Consulta SQL para insertar datos en la base de datos
+$sql = "INSERT INTO usuariosRegistrados (nombre, apellidos, correo, contraseña)
         VALUES ('$nombre', '$apellidos', '$correo', '$contrasena')";
 
-// Ejecutar la consulta
-if ($conexion->query($sql) === TRUE) {
-    echo "Registro exitoso";
+if ($conn->query($sql) === TRUE) {
+    // Notificación de éxito
+    echo "<script>alert('Usuario registrado correctamente.');</script>";
+    // Redirigir al usuario a la página de inicio después de 2 segundos
+    echo "<script>setTimeout(function(){ window.location.href = 'index.html'; }, 2000);</script>";
 } else {
-    echo "Error: " . $sql . "<br>" . $conexion->error;
+    echo "Error al registrar el usuario: " . $conn->error;
 }
 
-// Cerrar la conexión
-$conexion->close();
+// Cerrar conexión
+$conn->close();
 ?>
