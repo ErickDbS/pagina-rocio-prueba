@@ -10,7 +10,7 @@
   <div class="container-principal">
     <div class="login-container">
         <h1>Nutrina</h1>
-        <form id="login-form" method="POST" action="login.php">
+        <form id="login-form" method="POST" action="scriptsPHP/scriptLogin.php">
             <div class="input-field">
                 <label for="username">Usuario:</label>
                 <input type="text" id="Usuario" name="Usuario" required>
@@ -33,8 +33,6 @@
         <p>Además, en nuestra tienda encontrarás una amplia gama de productos cuidadosamente seleccionados para complementar tu régimen de salud y fitness.</p>
     </div>
   </div>
-
-  <script src="script/script.js"></script>
 
 </body>
 </html>

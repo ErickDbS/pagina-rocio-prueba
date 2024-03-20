@@ -5,25 +5,7 @@ body {
     background: linear-gradient(to right, #2980b9, #6dd5fa);  
 }
 
-.contenedor {
-    display: flex;
-    margin-left: 350px;
-    margin-top: 50px;
-}
 
-.imagen {
-    position: relative;
-    margin: 10px;
-    overflow: hidden;
-    border: 5px solid greenyellow;
-}
-
-.imagen img {
-    display: block;
-    width: 200px;
-    height: auto;
-    transition: transform 0.3s;
-}
 
 h1 {
     margin-left: 600px;
@@ -45,8 +27,24 @@ h1 {
 }
 
 
-.imagen:hover img {
-    transform: scale(1.1);
+.contenedor {
+    display: flex;
+    margin-left: 350px;
+    margin-top: 50px;
+}
+
+.imagen {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    border: 5px solid greenyellow;
+}
+
+.imagen img {
+    display: block;
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s;
 }
 
 .descripcion {
@@ -61,6 +59,30 @@ h1 {
     transition: opacity 0.3s;
 }
 
-.imagen:hover .descripcion {
+.imagen:hover img,
+.imagen.seleccionada img {
+    transform: scale(1.1);
+}
+
+.imagen:hover .descripcion,
+.imagen.seleccionada .descripcion {
     opacity: 1;
+}
+
+
+
+#Continuar {
+    margin-top: 20px;
+    margin-left: 700px;
+    width: 200px;
+    background: linear-gradient(to right, rgb(107, 248, 0), yellow);
+    border-radius: 100px;
+    height: 50px;
+    font-size: 15px;
+    color: black;
+}
+
+#Continuar:hover{
+    background: linear-gradient(to right, rgb(78, 179, 1), rgb(165, 165, 0));
+
 }

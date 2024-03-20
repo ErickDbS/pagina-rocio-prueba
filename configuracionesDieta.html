@@ -8,21 +8,32 @@
 </head>
 <body>
     <h1>Empezemos con unas configuraciones basicas</h1>
-    <h3>Proporcionanos la siguiente informacion (nombre del usuario)</h3>
-    <div class="informacion">
-        <label for="Sexo">Sexo</label><br>
-        <select id="Sexo" required>
-            <option>Selecciona una opcion</option>
-            <option value="Hombre">Hombre</option>
-            <option value="Mujer">Mujer</option>
-        </select><br>
-        <label for="Edad">Edad</label><br>
-        <input type="number"class="campos" required><br>
-        <label for="Altura">Estatura</label><br>
-        <input type="number"class="campos" required><br>
-        <label for="Altura">Peso</label><br>
-        <input type="number"class="campos" required><br>
-        <button type="submit" id="Continuar">Continuar</button>
-    </div>
+    <h3>Proporcionanos la siguiente informacion</h3>
+
+    <form action="/scriptsPHP/scriptConfig1.php" method='POST'>
+        <div class="informacion">
+            <label for="Sexo">Sexo</label><br>
+            <select id="Sexo" name="Sexo"  required>
+                <option>Selecciona una opcion</option>
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+            </select><br>
+            <label for="Edad">Edad</label><br>
+            <input type="number"class="campos" id="Edad" name="Edad" required><br>
+            <label for="Altura">Estatura</label><br>
+            <input type="number"class="campos" name="Estatura" required><br>
+            <label for="Altura">Peso</label><br>
+            <input type="number"class="campos" name="Peso" required><br>
+            <select id="actividad" name="actividad"  required>
+                <option>Selecciona una opcion</option>
+                <option value="poco activo">Poco activo</option>
+                <option value="moderado">Moderado</option>
+                <option value="activo">Activo</option>
+                <option value="muy activo">Muy activo</option>
+            </select><br>
+            <button type="submit" id="Continuar" onclick="redireccionar()">Continuar</button>
+        </div>
+    </form>
+    <script src="scriptsJS/scriptConfig1.js"></script>
 </body>
 </html>
